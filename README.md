@@ -17,5 +17,7 @@ O desafio foi elaborado com o intuito de implementar a API do youtube, contendo 
 
 ## Para compilar 
 - Instale: pip install google-api-python-client pandas streamlit plotly
+- Substitua: "SUA_CHAVE_AQUI" por "AIzaSyDZnIC41svM5-lv39BNWdvfLFMR8OXnPKQ" (na linha 6 da aplicacao.py)
+- Substitua: "PLAYLIST_ID_AQUI" por "PLfoNZDHitwjUv0pjTwlV1vzaE0r7UDVDR" (na linha 7 da aplicacao.py)
 - Execute: streamlit run app_streamlit.py
   
