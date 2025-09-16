@@ -99,6 +99,9 @@ with col1:
 st.subheader("📋 Top 10 Vídeos por Visualizações")
 top_10 = df_filtrado.sort_values('visualizacoes', ascending=False).head(10)
 
+top_10 = top_10.reset_index(drop=True)
+top_10.index = top_10.index + 1
+
 tabela_formatada = top_10[[
     'titulo', 
     'data_publicacao', 
