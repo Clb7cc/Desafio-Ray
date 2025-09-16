@@ -1,5 +1,5 @@
 # Desafio-Ray
-O desafio foi elaborado com o intuito de implementar a API do youtube, contendo vínculo com uma playlist composta por vídeos da Fórmula 1 de 2024.
+O desafio foi elaborado com o intuito de criar um dashboard interativo para análise de vídeos da Fórmula 1 2024, utilizando a API do YouTube para extrair e visualizar dados de uma playlist específica.
 
 ## Funcionalidades
 -> Coleta de dados automática da API do YouTube
@@ -12,12 +12,23 @@ O desafio foi elaborado com o intuito de implementar a API do youtube, contendo 
 
 -> Gráficos interativos da evolução das visualizações
 
+## Decisões Técnicas
+Dois arquivos foram criados, um destinado diretamente para os códigos que suportar a aplicação da API e outro constituído pela interface. Além disso, foi implementado o @st.cache_data para evitar chamadas desnecessárias à API e melhorar performance, assim como diversos tratamentos de erro, incluindo validações para situações onde a API não consegue retornar dados esperados.
+
+## Técnologias Utilizadas
+-> Streamlit: Framework escolhido por sua simplicidade para criar dashboards interativos rapidamente
+
+-> Plotly Express: Para gráficos interativos e visualmente atraentes
+
+-> Pandas: Manipulação e transformação eficiente dos dados
+
+-> Google API Client: Cliente oficial para integração com APIs do Google
+
 ## Autor do projeto
 - Caio Lima - clb@cesar.school / caiolbezerra2005@gmail.com
 
-## Para compilar 
-- Instale: pip install google-api-python-client pandas streamlit plotly
-- Substitua: "SUA_CHAVE_AQUI" por "AIzaSyDZnIC41svM5-lv39BNWdvfLFMR8OXnPKQ" (na linha 6 da aplicacao.py)
-- Substitua: "PLAYLIST_ID_AQUI" por "PLfoNZDHitwjUv0pjTwlV1vzaE0r7UDVDR" (na linha 7 da aplicacao.py)
+## Como executar o projeto
+- Clone o repositório
+- Instale: pip install -r requirements.txt
 - Execute: streamlit run app_streamlit.py
   
