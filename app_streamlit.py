@@ -83,6 +83,19 @@ with col2:
             st.progress(video['visualizacoes'] / top_5['visualizacoes'].max())
             st.markdown("---")
 
+with col1:
+    st.subheader("📈 Engajamento dos Mais Recentes")
+    recentes = df_filtrado.sort_values('data_publicacao', ascending=False).head(5)
+    fig2 = px.bar(
+        recentes, 
+        x='curtidas', 
+        y='titulo', 
+        orientation='h', 
+        title='Curtidas nos Vídeos Mais Recentes'
+    )
+    st.plotly_chart(fig2, use_container_width=True)
+
+
 st.subheader("📋 Top 10 Vídeos por Visualizações")
 top_10 = df_filtrado.sort_values('visualizacoes', ascending=False).head(10)
 
